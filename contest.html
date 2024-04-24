@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOLARSHIP</title>
+    <script type="text/javascript">
+        function validateform(){  
+             var name=document.getElementById('uname').value;
+             var fn=document.getElementById('pword').value;
+            if(name=="Adminn"){
+              if(fn=="admin@123"){
+                window.location.href = "mana_final_assignment.html";
+            }
+          }else{
+            if(name=="")
+            {
+            alert("Enter your UserName");
+         
+            return false;
+            }  
+           
+            if(name.length<6){  
+            alert("UserName Length is lessthan 6 character");
+           
+            return false;  
+            }
+            if(fn=="")
+            {
+            alert("Enter your Password");
+            document.myform.fn.focus();
+            return false;  
+            }
+             if(fn.length<6){  
+            alert("Password is lessthan 6 character");
+            document.myform.fn.focus();  
+            return false;  
+            }
+           else{
+              alert("Invalid Information");
+              return;
+           }
+         }
+         }
+           
+    </script>
+    <style>
+    .login-container{
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+
+.login-container:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FAF0E6;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://tse4.mm.bing.net/th?id=OIP.ikqeq4Ucd2KcPp5trk8nZAHaDV&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 47px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 95%;
+            padding: 9px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h2,p1,p2,p3,p4,p5{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>SCHOLARSHIP</h2>
+        <br>
+            <p1>Name:</p1>
+            <input type="text" id="uname" name="username" placeholder="Enter your Name">
+            <p2>Email ID:</p2>
+            <input type="text" id="uname" name="username" placeholder="Enter your Email">
+            <p3>Create Password:</p3>
+            <input type="password" id="pword" name="password" placeholder="Create your password">
+            <p4>Conform Password:</p4>
+            <input type="password" id="pword" name="password" placeholder="Conform your password">
+            <br><br>
+            <div class="remember-me--forget-password">
+
+            <label>
+            <input type="checkbox" name="item" checked />
+            <span class="text-checkbox"><p5>Remember me</p5></span>
+            </div>
+            <br>
+            <input type="submit" value="Sign Up" onclick="validateform()">
+       
+    </div>
+
+</body>
+</html>
+
